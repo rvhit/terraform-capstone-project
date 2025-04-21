@@ -1,0 +1,642 @@
+1. Terraform apply logs, for the first time:
+=====================================================
+
+PS C:\Users\XP.Rohith.Rathod\Videos\Capstone-project> terraform apply
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_instance.my_bg_blue will be created
+  + resource "aws_instance" "my_bg_blue" {
+      + ami                                  = "ami-0e449927258d45bc4"
+      + arn                                  = (known after apply)    
+      + associate_public_ip_address          = (known after apply)    
+      + availability_zone                    = (known after apply)    
+      + cpu_core_count                       = (known after apply)    
+      + cpu_threads_per_core                 = (known after apply)    
+      + disable_api_stop                     = (known after apply)    
+      + disable_api_termination              = (known after apply)    
+      + ebs_optimized                        = (known after apply)    
+      + enable_primary_ipv6                  = (known after apply)    
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + iam_instance_profile                 = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_lifecycle                   = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t2.micro"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = "rohit"
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + spot_instance_request_id             = (known after apply)
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Name" = "blue_instance_r"
+        }
+      + tags_all                             = {
+          + "Name" = "blue_instance_r"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = "db1e9838b06e62d07afe4ec4e89cc11aa575871a"
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
+
+      + capacity_reservation_specification (known after apply)
+
+      + cpu_options (known after apply)
+
+      + ebs_block_device (known after apply)
+
+      + enclave_options (known after apply)
+
+      + ephemeral_block_device (known after apply)
+
+      + instance_market_options (known after apply)
+
+      + maintenance_options (known after apply)
+
+      + metadata_options (known after apply)
+
+      + network_interface (known after apply)
+
+      + private_dns_name_options (known after apply)
+
+      + root_block_device (known after apply)
+    }
+
+  # aws_instance.my_bg_green will be created
+  + resource "aws_instance" "my_bg_green" {
+      + ami                                  = "ami-0e449927258d45bc4"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+      + availability_zone                    = (known after apply)
+      + cpu_core_count                       = (known after apply)
+      + cpu_threads_per_core                 = (known after apply)
+      + disable_api_stop                     = (known after apply)
+      + disable_api_termination              = (known after apply)
+      + ebs_optimized                        = (known after apply)
+      + enable_primary_ipv6                  = (known after apply)
+      + get_password_data                    = false
+      + host_id                              = (known after apply)
+      + host_resource_group_arn              = (known after apply)
+      + iam_instance_profile                 = (known after apply)
+      + id                                   = (known after apply)
+      + instance_initiated_shutdown_behavior = (known after apply)
+      + instance_lifecycle                   = (known after apply)
+      + instance_state                       = (known after apply)
+      + instance_type                        = "t2.micro"
+      + ipv6_address_count                   = (known after apply)
+      + ipv6_addresses                       = (known after apply)
+      + key_name                             = "rohit"
+      + monitoring                           = (known after apply)
+      + outpost_arn                          = (known after apply)
+      + password_data                        = (known after apply)
+      + placement_group                      = (known after apply)
+      + placement_partition_number           = (known after apply)
+      + primary_network_interface_id         = (known after apply)
+      + private_dns                          = (known after apply)
+      + private_ip                           = (known after apply)
+      + public_dns                           = (known after apply)
+      + public_ip                            = (known after apply)
+      + secondary_private_ips                = (known after apply)
+      + security_groups                      = (known after apply)
+      + source_dest_check                    = true
+      + spot_instance_request_id             = (known after apply)
+      + subnet_id                            = (known after apply)
+      + tags                                 = {
+          + "Name" = "green_instance_r"
+        }
+      + tags_all                             = {
+          + "Name" = "green_instance_r"
+        }
+      + tenancy                              = (known after apply)
+      + user_data                            = "a9edf07d8329db906f5c303f77bc84a23fae01d0"
+      + user_data_base64                     = (known after apply)
+      + user_data_replace_on_change          = false
+      + vpc_security_group_ids               = (known after apply)
+
+      + capacity_reservation_specification (known after apply)
+
+      + cpu_options (known after apply)
+
+      + ebs_block_device (known after apply)
+
+      + enclave_options (known after apply)
+
+      + ephemeral_block_device (known after apply)
+
+      + instance_market_options (known after apply)
+
+      + maintenance_options (known after apply)
+
+      + metadata_options (known after apply)
+
+      + network_interface (known after apply)
+
+      + private_dns_name_options (known after apply)
+
+      + root_block_device (known after apply)
+    }
+
+  # aws_internet_gateway.my_bg_igw will be created
+  + resource "aws_internet_gateway" "my_bg_igw" {
+      + arn      = (known after apply)
+      + id       = (known after apply)
+      + owner_id = (known after apply)
+      + tags     = {
+          + "Name" = "my_bg_igw"
+        }
+      + tags_all = {
+          + "Name" = "my_bg_igw"
+        }
+      + vpc_id   = (known after apply)
+    }
+
+  # aws_lb.my_bg_alb will be created
+  + resource "aws_lb" "my_bg_alb" {
+      + arn                                                          = (known after apply)
+      + arn_suffix                                                   = (known after apply)
+      + client_keep_alive                                            = 3600
+      + desync_mitigation_mode                                       = "defensive"
+      + dns_name                                                     = (known after apply)
+      + drop_invalid_header_fields                                   = false
+      + enable_deletion_protection                                   = false
+      + enable_http2                                                 = true
+      + enable_tls_version_and_cipher_suite_headers                  = false
+      + enable_waf_fail_open                                         = false
+      + enable_xff_client_port                                       = false
+      + enable_zonal_shift                                           = false
+      + enforce_security_group_inbound_rules_on_private_link_traffic = (known after apply)
+      + id                                                           = (known after apply)
+      + idle_timeout                                                 = 60
+      + internal                                                     = false
+      + ip_address_type                                              = (known after apply)
+      + load_balancer_type                                           = "application"
+      + name                                                         = "blue-green-alb-r"
+      + name_prefix                                                  = (known after apply)
+      + preserve_host_header                                         = false
+      + security_groups                                              = (known after apply)
+      + subnets                                                      = (known after apply)
+      + tags_all                                                     = (known after apply)
+      + vpc_id                                                       = (known after apply)
+      + xff_header_processing_mode                                   = "append"
+      + zone_id                                                      = (known after apply)
+
+      + subnet_mapping (known after apply)
+    }
+
+  # aws_lb_listener.my_bg_front_end will be created
+  + resource "aws_lb_listener" "my_bg_front_end" {
+      + arn                                                                   = (known after apply)
+      + id                                                                    = (known after apply)
+      + load_balancer_arn                                                     = (known after apply)
+      + port                                                                  = 80
+      + protocol                                                              = "HTTP"
+      + routing_http_request_x_amzn_mtls_clientcert_header_name               = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_issuer_header_name        = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_leaf_header_name          = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_serial_number_header_name = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_subject_header_name       = (known after apply)
+      + routing_http_request_x_amzn_mtls_clientcert_validity_header_name      = (known after apply)
+      + routing_http_request_x_amzn_tls_cipher_suite_header_name              = (known after apply)
+      + routing_http_request_x_amzn_tls_version_header_name                   = (known after apply)
+      + routing_http_response_access_control_allow_credentials_header_value   = (known after apply)
+      + routing_http_response_access_control_allow_headers_header_value       = (known after apply)
+      + routing_http_response_access_control_allow_methods_header_value       = (known after apply)
+      + routing_http_response_access_control_allow_origin_header_value        = (known after apply)
+      + routing_http_response_access_control_expose_headers_header_value      = (known after apply)
+      + routing_http_response_access_control_max_age_header_value             = (known after apply)
+      + routing_http_response_content_security_policy_header_value            = (known after apply)
+      + routing_http_response_server_enabled                                  = (known after apply)
+      + routing_http_response_strict_transport_security_header_value          = (known after apply)
+      + routing_http_response_x_content_type_options_header_value             = (known after apply)
+      + routing_http_response_x_frame_options_header_value                    = (known after apply)
+      + ssl_policy                                                            = (known after apply)
+      + tags_all                                                              = (known after apply)
+      + tcp_idle_timeout_seconds                                              = (known after apply)
+
+      + default_action {
+          + order            = (known after apply)
+          + target_group_arn = (known after apply)
+          + type             = "forward"
+        }
+
+      + mutual_authentication (known after apply)
+    }
+
+  # aws_lb_target_group.my_bg_blue_tg will be created
+  + resource "aws_lb_target_group" "my_bg_blue_tg" {
+      + arn                                = (known after apply)
+      + arn_suffix                         = (known after apply)
+      + connection_termination             = (known after apply)
+      + deregistration_delay               = "300"
+      + id                                 = (known after apply)
+      + ip_address_type                    = (known after apply)
+      + lambda_multi_value_headers_enabled = false
+      + load_balancer_arns                 = (known after apply)
+      + load_balancing_algorithm_type      = (known after apply)
+      + load_balancing_anomaly_mitigation  = (known after apply)
+      + load_balancing_cross_zone_enabled  = (known after apply)
+      + name                               = "blue-target-group-r"
+      + name_prefix                        = (known after apply)
+      + port                               = 80
+      + preserve_client_ip                 = (known after apply)
+      + protocol                           = "HTTP"
+      + protocol_version                   = (known after apply)
+      + proxy_protocol_v2                  = false
+      + slow_start                         = 0
+      + tags_all                           = (known after apply)
+      + target_type                        = "instance"
+      + vpc_id                             = (known after apply)
+
+      + health_check {
+          + enabled             = true
+          + healthy_threshold   = 2
+          + interval            = 30
+          + matcher             = "200-299"
+          + path                = "/"
+          + port                = "traffic-port"
+          + protocol            = "HTTP"
+          + timeout             = 5
+          + unhealthy_threshold = 2
+        }
+
+      + stickiness (known after apply)
+
+      + target_failover (known after apply)
+
+      + target_group_health (known after apply)
+
+      + target_health_state (known after apply)
+    }
+
+  # aws_lb_target_group.my_bg_green_tg will be created
+  + resource "aws_lb_target_group" "my_bg_green_tg" {
+      + arn                                = (known after apply)
+      + arn_suffix                         = (known after apply)
+      + connection_termination             = (known after apply)
+      + deregistration_delay               = "300"
+      + id                                 = (known after apply)
+      + ip_address_type                    = (known after apply)
+      + lambda_multi_value_headers_enabled = false
+      + load_balancer_arns                 = (known after apply)
+      + load_balancing_algorithm_type      = (known after apply)
+      + load_balancing_anomaly_mitigation  = (known after apply)
+      + load_balancing_cross_zone_enabled  = (known after apply)
+      + name                               = "green-target-group-r"
+      + name_prefix                        = (known after apply)
+      + port                               = 80
+      + preserve_client_ip                 = (known after apply)
+      + protocol                           = "HTTP"
+      + protocol_version                   = (known after apply)
+      + proxy_protocol_v2                  = false
+      + slow_start                         = 0
+      + tags_all                           = (known after apply)
+      + target_type                        = "instance"
+      + vpc_id                             = (known after apply)
+
+      + health_check {
+          + enabled             = true
+          + healthy_threshold   = 2
+          + interval            = 30
+          + matcher             = "200-299"
+          + path                = "/"
+          + port                = "traffic-port"
+          + protocol            = "HTTP"
+          + timeout             = 5
+          + unhealthy_threshold = 2
+        }
+
+      + stickiness (known after apply)
+
+      + target_failover (known after apply)
+
+      + target_group_health (known after apply)
+
+      + target_health_state (known after apply)
+    }
+
+  # aws_lb_target_group_attachment.my_bg_blue_attach will be created
+  + resource "aws_lb_target_group_attachment" "my_bg_blue_attach" {
+      + id               = (known after apply)
+      + port             = 80
+      + target_group_arn = (known after apply)
+      + target_id        = (known after apply)
+    }
+
+  # aws_lb_target_group_attachment.my_bg_green_attach will be created
+  + resource "aws_lb_target_group_attachment" "my_bg_green_attach" {
+      + id               = (known after apply)
+      + port             = 80
+      + target_group_arn = (known after apply)
+      + target_id        = (known after apply)
+    }
+
+  # aws_route.my_bg_default will be created
+  + resource "aws_route" "my_bg_default" {
+      + destination_cidr_block = "0.0.0.0/0"
+      + gateway_id             = (known after apply)
+      + id                     = (known after apply)
+      + instance_id            = (known after apply)
+      + instance_owner_id      = (known after apply)
+      + network_interface_id   = (known after apply)
+      + origin                 = (known after apply)
+      + route_table_id         = (known after apply)
+      + state                  = (known after apply)
+    }
+
+  # aws_route_table.my_bg_rt will be created
+  + resource "aws_route_table" "my_bg_rt" {
+      + arn              = (known after apply)
+      + id               = (known after apply)
+      + owner_id         = (known after apply)
+      + propagating_vgws = (known after apply)
+      + route            = (known after apply)
+      + tags             = {
+          + "Name" = "my_bg_rt"
+        }
+      + tags_all         = {
+          + "Name" = "my_bg_rt"
+        }
+      + vpc_id           = (known after apply)
+    }
+
+  # aws_route_table_association.my_bg_rta will be created
+  + resource "aws_route_table_association" "my_bg_rta" {
+      + id             = (known after apply)
+      + route_table_id = (known after apply)
+      + subnet_id      = (known after apply)
+    }
+
+  # aws_security_group.my_bg_web_sg will be created
+  + resource "aws_security_group" "my_bg_web_sg" {
+      + arn                    = (known after apply)
+      + description            = "Managed by Terraform"
+      + egress                 = [
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + from_port        = 0
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "-1"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 0
+                # (1 unchanged attribute hidden)
+            },
+        ]
+      + id                     = (known after apply)
+      + ingress                = [
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + from_port        = 22
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "tcp"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 22
+                # (1 unchanged attribute hidden)
+            },
+          + {
+              + cidr_blocks      = [
+                  + "0.0.0.0/0",
+                ]
+              + from_port        = 80
+              + ipv6_cidr_blocks = []
+              + prefix_list_ids  = []
+              + protocol         = "tcp"
+              + security_groups  = []
+              + self             = false
+              + to_port          = 80
+                # (1 unchanged attribute hidden)
+            },
+        ]
+      + name                   = (known after apply)
+      + name_prefix            = (known after apply)
+      + owner_id               = (known after apply)
+      + revoke_rules_on_delete = false
+      + tags                   = {
+          + "Name" = "my_bg_web_sg"
+        }
+      + tags_all               = {
+          + "Name" = "my_bg_web_sg"
+        }
+      + vpc_id                 = (known after apply)
+    }
+
+  # aws_subnet.my_bg_subnet will be created
+  + resource "aws_subnet" "my_bg_subnet" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1a"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.1.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = true
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags_all                                       = (known after apply)
+      + vpc_id                                         = (known after apply)
+    }
+
+  # aws_subnet.my_bg_subnet_2 will be created
+  + resource "aws_subnet" "my_bg_subnet_2" {
+      + arn                                            = (known after apply)
+      + assign_ipv6_address_on_creation                = false
+      + availability_zone                              = "us-east-1b"
+      + availability_zone_id                           = (known after apply)
+      + cidr_block                                     = "10.0.2.0/24"
+      + enable_dns64                                   = false
+      + enable_resource_name_dns_a_record_on_launch    = false
+      + enable_resource_name_dns_aaaa_record_on_launch = false
+      + id                                             = (known after apply)
+      + ipv6_cidr_block_association_id                 = (known after apply)
+      + ipv6_native                                    = false
+      + map_public_ip_on_launch                        = true
+      + owner_id                                       = (known after apply)
+      + private_dns_hostname_type_on_launch            = (known after apply)
+      + tags_all                                       = (known after apply)
+      + vpc_id                                         = (known after apply)
+    }
+
+  # aws_vpc.my_bg_vpc will be created
+  + resource "aws_vpc" "my_bg_vpc" {
+      + arn                                  = (known after apply)
+      + cidr_block                           = "10.0.0.0/16"
+      + default_network_acl_id               = (known after apply)
+      + default_route_table_id               = (known after apply)
+      + default_security_group_id            = (known after apply)
+      + dhcp_options_id                      = (known after apply)
+      + enable_dns_hostnames                 = true
+      + enable_dns_support                   = true
+      + enable_network_address_usage_metrics = (known after apply)
+      + id                                   = (known after apply)
+      + instance_tenancy                     = "default"
+      + ipv6_association_id                  = (known after apply)
+      + ipv6_cidr_block                      = (known after apply)
+      + ipv6_cidr_block_network_border_group = (known after apply)
+      + main_route_table_id                  = (known after apply)
+      + owner_id                             = (known after apply)
+      + tags                                 = {
+          + "Name" = "my_bg_vpc_vpc_r"
+        }
+      + tags_all                             = {
+          + "Name" = "my_bg_vpc_vpc_r"
+        }
+    }
+
+Plan: 16 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + alb_dns = (known after apply)
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_vpc.my_bg_vpc: Creating...
+aws_vpc.my_bg_vpc: Still creating... [10s elapsed]
+aws_vpc.my_bg_vpc: Creation complete after 15s [id=vpc-0f80f85975728c134]
+aws_internet_gateway.my_bg_igw: Creating...
+aws_route_table.my_bg_rt: Creating...
+aws_subnet.my_bg_subnet: Creating...
+aws_subnet.my_bg_subnet_2: Creating...
+aws_lb_target_group.my_bg_green_tg: Creating...
+aws_lb_target_group.my_bg_blue_tg: Creating...
+aws_security_group.my_bg_web_sg: Creating...
+aws_internet_gateway.my_bg_igw: Creation complete after 2s [id=igw-0c46b2bce7898f8f5]
+aws_route_table.my_bg_rt: Creation complete after 2s [id=rtb-076491e3d72ed6949]
+aws_route.my_bg_default: Creating...
+aws_route.my_bg_default: Creation complete after 2s [id=r-rtb-076491e3d72ed69491080289494]
+aws_lb_target_group.my_bg_green_tg: Creation complete after 5s [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:targetgroup/green-target-group-r/99a842d4dad3add3]
+aws_lb_target_group.my_bg_blue_tg: Creation complete after 5s [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:targetgroup/blue-target-group-r/f0fc32e11fccb168]
+aws_security_group.my_bg_web_sg: Creation complete after 6s [id=sg-05deea83808db118d]
+aws_subnet.my_bg_subnet: Still creating... [10s elapsed]
+aws_subnet.my_bg_subnet_2: Still creating... [10s elapsed]
+aws_subnet.my_bg_subnet: Creation complete after 13s [id=subnet-0f4c3956c83fab4d3]
+aws_subnet.my_bg_subnet_2: Creation complete after 13s [id=subnet-0217791030dcafd2a]
+aws_route_table_association.my_bg_rta: Creating...
+aws_instance.my_bg_blue: Creating...
+aws_lb.my_bg_alb: Creating...
+aws_instance.my_bg_green: Creating...
+aws_route_table_association.my_bg_rta: Creation complete after 1s [id=rtbassoc-0e6aff17ca5c70cf8]
+aws_lb.my_bg_alb: Still creating... [10s elapsed]
+aws_instance.my_bg_blue: Still creating... [10s elapsed]
+aws_instance.my_bg_green: Still creating... [10s elapsed]
+aws_instance.my_bg_blue: Creation complete after 16s [id=i-0cefe4a59992c5376]
+aws_lb_target_group_attachment.my_bg_blue_attach: Creating...
+aws_instance.my_bg_green: Creation complete after 16s [id=i-051fab00124a602f8]
+aws_lb_target_group_attachment.my_bg_green_attach: Creating...
+aws_lb_target_group_attachment.my_bg_blue_attach: Creation complete after 0s [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:targetgroup/blue-target-group-r/f0fc32e11fccb168-20250420065847210700000005]
+aws_lb_target_group_attachment.my_bg_green_attach: Creation complete after 1s [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:targetgroup/green-target-group-r/99a842d4dad3add3-20250420065848290300000006]
+aws_lb.my_bg_alb: Still creating... [20s elapsed]
+aws_lb.my_bg_alb: Still creating... [30s elapsed]
+aws_lb.my_bg_alb: Still creating... [40s elapsed]
+aws_lb.my_bg_alb: Still creating... [50s elapsed]
+aws_lb.my_bg_alb: Still creating... [1m0s elapsed]
+aws_lb.my_bg_alb: Still creating... [1m10s elapsed]
+aws_lb.my_bg_alb: Still creating... [1m20s elapsed]
+aws_lb.my_bg_alb: Still creating... [1m30s elapsed]
+aws_lb.my_bg_alb: Still creating... [1m40s elapsed]
+aws_lb.my_bg_alb: Still creating... [1m50s elapsed]
+aws_lb.my_bg_alb: Still creating... [2m0s elapsed]
+aws_lb.my_bg_alb: Still creating... [2m10s elapsed]
+aws_lb.my_bg_alb: Still creating... [2m20s elapsed]
+aws_lb.my_bg_alb: Still creating... [2m30s elapsed]
+aws_lb.my_bg_alb: Still creating... [2m40s elapsed]
+aws_lb.my_bg_alb: Still creating... [2m50s elapsed]
+aws_lb.my_bg_alb: Creation complete after 2m59s [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:loadbalancer/app/blue-green-alb-r/0436f016124d05d9]    
+aws_lb_listener.my_bg_front_end: Creating...
+aws_lb_listener.my_bg_front_end: Creation complete after 3s [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:listener/app/blue-green-alb-r/0436f016124d05d9/89d1e83fc0db8848]
+
+Apply complete! Resources: 16 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+alb_dns = "blue-green-alb-r-1246261203.us-east-1.elb.amazonaws.com"
+
+2. Terraform apply logs, after manually changing to Green env:
+===============================================================
+
+PS C:\Users\XP.Rohith.Rathod\Videos\Capstone-project> terraform apply
+aws_vpc.my_bg_vpc: Refreshing state... [id=vpc-0f80f85975728c134]
+aws_route_table.my_bg_rt: Refreshing state... [id=rtb-076491e3d72ed6949]
+aws_lb_target_group.my_bg_blue_tg: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:targetgroup/blue-target-group-r/f0fc32e11fccb168]
+aws_lb_target_group.my_bg_green_tg: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:targetgroup/green-target-group-r/99a842d4dad3add3]
+aws_internet_gateway.my_bg_igw: Refreshing state... [id=igw-0c46b2bce7898f8f5]
+aws_subnet.my_bg_subnet: Refreshing state... [id=subnet-0f4c3956c83fab4d3]
+aws_subnet.my_bg_subnet_2: Refreshing state... [id=subnet-0217791030dcafd2a]
+aws_security_group.my_bg_web_sg: Refreshing state... [id=sg-05deea83808db118d]
+aws_route.my_bg_default: Refreshing state... [id=r-rtb-076491e3d72ed69491080289494]
+aws_route_table_association.my_bg_rta: Refreshing state... [id=rtbassoc-0e6aff17ca5c70cf8]
+aws_lb.my_bg_alb: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:loadbalancer/app/blue-green-alb-r/0436f016124d05d9]
+aws_instance.my_bg_green: Refreshing state... [id=i-051fab00124a602f8]
+aws_instance.my_bg_blue: Refreshing state... [id=i-0cefe4a59992c5376] 
+aws_lb_listener.my_bg_front_end: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:listener/app/blue-green-alb-r/0436f016124d05d9/89d1e83fc0db8848]
+aws_lb_target_group_attachment.my_bg_blue_attach: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:targetgroup/blue-target-group-r/f0fc32e11fccb168-20250420065847210700000005]
+aws_lb_target_group_attachment.my_bg_green_attach: Refreshing state... [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:targetgroup/green-target-group-r/99a842d4dad3add3-20250420065848290300000006]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  ~ update in-place
+
+Terraform will perform the following actions:
+
+  # aws_lb_listener.my_bg_front_end will be updated in-place
+  ~ resource "aws_lb_listener" "my_bg_front_end" {
+        id                                                                  = "arn:aws:elasticloadbalancing:us-east-1:086922953172:listener/app/blue-green-alb-r/0436f016124d05d9/89d1e83fc0db8848"
+        tags                                                                = {}
+        # (17 unchanged attributes hidden)
+
+      ~ default_action {
+          ~ target_group_arn = "arn:aws:elasticloadbalancing:us-east-1:086922953172:targetgroup/blue-target-group-r/f0fc32e11fccb168" -> "arn:aws:elasticloadbalancing:us-east-1:086922953172:targetgroup/green-target-group-r/99a842d4dad3add3"
+            # (2 unchanged attributes hidden)
+        }
+    }
+
+Plan: 0 to add, 1 to change, 0 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+aws_lb_listener.my_bg_front_end: Modifying... [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:listener/app/blue-green-alb-r/0436f016124d05d9/89d1e83fc0db8848]
+aws_lb_listener.my_bg_front_end: Modifications complete after 2s [id=arn:aws:elasticloadbalancing:us-east-1:086922953172:listener/app/blue-green-alb-r/0436f016124d05d9/89d1e83fc0db8848]
+
+Apply complete! Resources: 0 added, 1 changed, 0 destroyed.
+
+Outputs:
+
+alb_dns = "blue-green-alb-r-1246261203.us-east-1.elb.amazonaws.com"
+ 
